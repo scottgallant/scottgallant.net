@@ -1,0 +1,175 @@
+@import "/css/marx.min.css";
+
+:root {
+    --primary-400: #60a5fa;
+    --primary: #3b82f6;
+    --primary-600: #2563eb;
+    --accent: #64ffda;
+}
+
+body {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 130%;
+}
+
+body>.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2em 1em;
+}
+
+/* Dark theme */
+body.dark {
+    background-color: #1a1a1a;
+    --text: #efefef;
+    --secondary: #efefef;
+    --dividers: #878787;
+    --border: 1px solid var(--dividers);
+    color: var(--text);
+}
+
+body.dark input[type=email],
+body.dark input[type=text] {
+    background-color: #ffffff;
+    border-color: white;
+    color: #333;
+}
+
+
+/* End dark theme */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 800;
+}
+
+nav {
+    background-color: transparent;
+    padding: 1em 0;
+}
+
+nav a {
+    font-size: .8em;
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    margin-right: 20px;
+}
+
+@media (max-device-width:600px) {
+    nav a {
+        margin-right: 8px;
+    }
+}
+
+nav a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+nav .icon {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+#theme_toggler {
+    color: var(--primary-400);
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+nav .icon:hover,
+#theme_toggler:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: var(--primary-600);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+.gist td {
+    border-bottom: none;
+}
+
+/* Utility classes (use them whenever needed) */
+
+.right {
+    float: right;
+}
+
+#mc-embedded-subscribe-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+@media (max-device-width:600px) {
+    #mc-embedded-subscribe-form {
+        width: 90%;
+    }
+}
+
+#mc-embedded-subscribe-form input {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#mc-embedded-subscribe-form input.email {
+    flex-grow: 2;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#mc-embedded-subscribe-form input.button {
+    flex-basis: auto;
+    width: 130px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.super-wide {
+    overflow: hidden;
+    width: 140%;
+    max-width: calc(100vw);
+    left: 50%;
+    position: relative;
+    transform: translate3d(-50%, 0px, 0px);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .super-wide {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
+
+.hidden {
+    display: none;
+    ;
+}
