@@ -9,7 +9,7 @@ document.write(`
             required>
         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
     </form>
-    <p><small>Spock</small></p>
+    <p><small>Scott Gallant</small></p>
 
     <!--End mc_embed_signup-->
 </footer>
