@@ -5,12 +5,16 @@
     --primary: #3b82f6;
     --primary-600: #2563eb;
     --accent: #64ffda;
+    --text: rgba(0, 0, 0, .75);
+    --secondary: rgba(0, 0, 0, .54);
 }
 
 body {
     font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    font-size: 130%;
+    font-size: 125%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body>.container {
@@ -23,9 +27,18 @@ body>.container {
 body.dark {
     background-color: #1a1a1a;
     --text: #efefef;
-    --secondary: #efefef;
+    --secondary: #BCBCBD;
     --dividers: #878787;
     --border: 1px solid var(--dividers);
+    color: var(--secondary);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
     color: var(--text);
 }
 
@@ -35,7 +48,6 @@ body.dark input[type=text] {
     border-color: white;
     color: #333;
 }
-
 
 /* End dark theme */
 
@@ -48,6 +60,7 @@ h6 {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-weight: 800;
+    color: rgba(0, 0, 0, .9);
 }
 
 nav {
