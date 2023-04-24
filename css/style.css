@@ -1,9 +1,9 @@
 @import "/css/marx.min.css";
 
 :root {
-    --primary-400: #60a5fa;
-    --primary: #3b82f6;
-    --primary-600: #2563eb;
+    --primary-400: #59f1ba;
+    --primary: #18cb8a;
+    --primary-600: #0bb677;
     --accent: #64ffda;
     --text: rgba(0, 0, 0, .75);
     --secondary: rgba(0, 0, 0, .54);
@@ -189,4 +189,11 @@ footer {
 .hidden {
     display: none;
     ;
+}
+
+.call-out {
+    background-color: var(--primary-600);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
 }
