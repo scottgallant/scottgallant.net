@@ -7,6 +7,8 @@
     --accent: #64ffda;
     --text: rgba(0, 0, 0, .75);
     --secondary: rgba(0, 0, 0, .54);
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
 }
 
 body {
