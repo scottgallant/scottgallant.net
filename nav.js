@@ -5,7 +5,7 @@ document.write(`
         <a href="/">Scott Gallant</a>
         <div class="right">
             <a href="/posts/">Posts</a>
-            <!-- <a href="/about/">About</a> -->
+            <a href="/about/">About</a>
             <!-- https://icons.getbootstrap.com/ -->
 
             <a href="https://twitter.com/scottgallant" class="icon">
