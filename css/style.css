@@ -9,6 +9,7 @@
     --secondary: rgba(0, 0, 0, .54);
     --font-size-h3: 24px;
     --font-size-h4: 20px;
+    --line-height-base: 1.6;
 }
 
 body {
