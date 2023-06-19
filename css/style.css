@@ -10,12 +10,12 @@
     --font-size-h3: 24px;
     --font-size-h4: 20px;
     --line-height-base: 1.6;
+    --font-size-base: 22px;
 }
 
 body {
     font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    font-size: 125%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
