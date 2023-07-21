@@ -1,4 +1,5 @@
 @import "/css/marx.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&display=swap');
 
 :root {
     --primary-400: #59f1ba;
@@ -60,10 +61,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    font-weight: 800;
-    color: rgba(0, 0, 0, .9);
+    font-family: 'Libre Franklin', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 900;
+    color: rgba(0, 0, 0, .8);
+    letter-spacing: 1px;
 }
 
 nav {
