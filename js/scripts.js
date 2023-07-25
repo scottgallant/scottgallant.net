@@ -43,3 +43,45 @@ retrieve_theme();
 window.addEventListener("storage", function () {
     retrieve_theme();
 }, false);
+
+
+// Add Table of Contents to posts
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the table of contents container
+    const tocContainer = document.getElementById('table_of_contents');
+
+    // Get all headings inside the article tag, excluding h1
+    const headings = document.querySelectorAll('article h2, article h3, article h4, article h5, article h6');
+
+    // Initialize variables to keep track of the hierarchy
+    let lastLevel = 1;  // We're starting from level 2 (h2) since we excluded h1
+    let currentContainer = tocContainer;
+
+    headings.forEach((heading) => {
+        const level = parseInt(heading.tagName[1], 10);
+
+        if (level > lastLevel) {
+            // Create a new list for sub-items
+            const newList = document.createElement('ul');
+            currentContainer.appendChild(newList);
+            currentContainer = newList;
+        } else if (level < lastLevel) {
+            // Go back up to the parent's parent container
+            for (let i = 0; i < (lastLevel - level); i++) {
+                currentContainer = currentContainer.parentElement;
+            }
+        }
+
+        // Create a new list item and link for the heading
+        const newItem = document.createElement('li');
+        const newLink = document.createElement('a');
+        newLink.href = `#${heading.id}`;
+        newLink.textContent = heading.textContent;
+        newItem.appendChild(newLink);
+        currentContainer.appendChild(newItem);
+
+        // Update the lastLevel to the current heading's level
+        lastLevel = level;
+    });
+});
