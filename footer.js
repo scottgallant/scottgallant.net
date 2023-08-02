@@ -12,6 +12,16 @@ document.write(`
     <p><small>Scott Gallant</small></p>
 
     <!--End mc_embed_signup-->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9DK1ZSGLX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X9DK1ZSGLX');
+    </script>
 </footer>
 
 `);
