@@ -1,17 +1,14 @@
-@import "/css/marx.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
-
 :root {
-    --primary-400: #59f1ba;
-    --primary: #18cb8a;
-    --primary-600: #0bb677;
+    --primary-400: #60a5fa;
+    --primary: #3b82f6;
+    --primary-600: #2563eb;
+    --secondary: rgba(0, 0, 0, 0.54);
     --accent: #64ffda;
     --text: rgba(0, 0, 0, .75);
     --secondary: rgba(0, 0, 0, .54);
-    --font-size-h3: 24px;
-    --font-size-h4: 20px;
     --line-height-base: 1.6;
     --font-size-base: 22px;
+    --border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -19,12 +16,16 @@ body {
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text);
 }
 
 body>.container {
     max-width: 700px;
     margin: auto;
     padding: 2em 1em;
+    box-sizing: border-box;
 }
 
 /* Dark theme */
@@ -55,25 +56,100 @@ body.dark input[type=text] {
 
 /* End dark theme */
 
+
+/* HTML Elements */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    /* font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; */
-    font-family: 'Libre Franklin', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    font-weight: 700;
-    color: rgba(0, 0, 0, .8);
-    letter-spacing: 1px;
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 800;
+    color: rgba(0, 0, 0, .9);
 }
 
 h1,
 h2,
 h3 {
-    margin: var(--xlg-pad) 0 var(--sm-pad);
+    margin: 40px 0 5px;
 }
+
+p {
+    margin: 0 0 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:visited {
+    color: var(--primary);
+}
+
+pre {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+    background: #FFF;
+    background-clip: padding-box;
+    border: var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 8px 16px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    word-break: normal;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 8px 16px;
+    text-align: center;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Sections */
 
 nav {
     background-color: transparent;
@@ -129,12 +205,13 @@ article img {
 
 footer {
     text-align: center;
+    border-top: var(--border);
     padding: 1em 0;
     margin-top: 2em;
 }
 
-.gist td {
-    border-bottom: none;
+small {
+    color: var(--secondary)
 }
 
 /* Utility classes (use them whenever needed) */
@@ -143,7 +220,7 @@ footer {
     float: right;
 }
 
-#mc-embedded-subscribe-form {
+footer form {
     width: 100%;
     max-width: 500px;
     margin: 2em auto;
@@ -154,53 +231,53 @@ footer {
 }
 
 @media (max-device-width:600px) {
-    #mc-embedded-subscribe-form {
+    footer form {
         width: 90%;
     }
 }
 
-#mc-embedded-subscribe-form input {
+footer form input {
     margin: 0;
     display: flex;
     flex-direction: row;
 }
 
-#mc-embedded-subscribe-form input.email {
+footer input[type=email],
+footer input[type=email]:focus-visible {
     flex-grow: 2;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-#mc-embedded-subscribe-form input.button {
+footer input.button,
+footer input[type=submit] {
     flex-basis: auto;
-    width: 130px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.super-wide {
+
+
+img.super-wide {
     overflow: hidden;
     width: 140%;
     max-width: calc(100vw);
     left: 50%;
     position: relative;
     transform: translate3d(-50%, 0px, 0px);
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    display: block;
 }
 
 @media (max-width: 600px) {
-    .super-wide {
-        width: 100%;
-        max-width: 100%;
-        left: 0;
-        transform: none;
+    img.super-wide {
+        border-radius: 0;
     }
 }
 
 .hidden {
     display: none;
-    ;
 }
 
 .call-out {
