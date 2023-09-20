@@ -180,15 +180,9 @@ nav .icon {
 }
 
 #theme_toggler {
-    color: var(--link-color);
-    font-size: 14px;
-    vertical-align: sub;
+    color: var(--primary);
+    vertical-align: middle;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    position: relative;
-    top: -5px;
-    left: -5px;
 }
 
 nav .icon:hover,
