@@ -2,12 +2,12 @@ document.write(`
 
 <header>
     <nav>
-        
-    <a href="/">Home</a>
-    <a href="/posts/">Posts</a>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/posts/">Posts</a>
             <a href="/about/">About</a>
-            <!-- https://icons.getbootstrap.com/ -->
-            <div class="right icons">
+        </div>
+        <div class="icons">
             <a href="https://twitter.com/scottgallant" class="icon">
                 <!-- twitter -->
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -23,13 +23,17 @@ document.write(`
                 </svg>
             </a>
             <span href="#" class="icon" id="theme_toggler">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" id="sun" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.657-5.657L19.07 4.93M4.93 19.07l1.414-1.414m0-11.314L4.93 4.93M19.07 19.07l-1.414-1.414M12 17a5 5 0 100-10 5 5 0 000 10z"></path>
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" id="sun" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.657-5.657L19.07 4.93M4.93 19.07l1.414-1.414m0-11.314L4.93 4.93M19.07 19.07l-1.414-1.414M12 17a5 5 0 100-10 5 5 0 000 10z">
+                    </path>
+                </svg>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" id="moon"  viewBox="0 0 24 24">
-                    <path stroke-linejoin="round" stroke-width="2" d="M9.874 5.008c2.728-1.68 6.604-1.014 8.25.197-2.955.84-5.11 3.267-5.242 6.415-.18 4.28 3.006 6.588 5.24 7.152-1.964 1.343-4.36 1.293-5.235 1.172-3.568-.492-6.902-3.433-7.007-7.711-.106-4.278 2.573-6.35 3.994-7.225z"></path>                    
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" id="moon" viewBox="0 0 24 24">
+                    <path stroke-linejoin="round" stroke-width="2"
+                        d="M9.874 5.008c2.728-1.68 6.604-1.014 8.25.197-2.955.84-5.11 3.267-5.242 6.415-.18 4.28 3.006 6.588 5.24 7.152-1.964 1.343-4.36 1.293-5.235 1.172-3.568-.492-6.902-3.433-7.007-7.711-.106-4.278 2.573-6.35 3.994-7.225z">
+                    </path>
+                </svg>
             </span>
         </div>
     </nav>

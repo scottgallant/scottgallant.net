@@ -169,6 +169,10 @@ input[type=submit] {
 nav {
     background-color: transparent;
     padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 nav a {
@@ -189,14 +193,23 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav .links {
+    line-height: 1;
+}
+
 nav .icon {
-    opacity: 0.7;
+    opacity: 0.8;
     text-decoration: none;
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
 }
 
 .icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons>* {
     display: flex;
     align-items: center;
 }
@@ -229,12 +242,6 @@ footer {
 small {
     color: var(--secondary);
     font-size: 16px;
-}
-
-/* Utility classes (use them whenever needed) */
-
-.right {
-    float: right;
 }
 
 footer form {
