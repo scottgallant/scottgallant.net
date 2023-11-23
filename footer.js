@@ -1,5 +1,4 @@
 document.write(`
-
 <footer>
    <!-- Buttondown Form -->
    <form
