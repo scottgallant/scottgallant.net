@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Seindfeld Calendar</title>
+    <meta name="description" content="The Seinfeld Calendar - a Next.js calendar to track daily habits">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta property="og:image" content="https://scottgallant.net/media/sam_altman_jiu-jitsu-master.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖖</text></svg>">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/prism.css" rel="stylesheet" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Seinfeld Calendar">
+    <meta name="twitter:site:id" content="@scottgallant">
+    <meta name="twitter:creator" content="@scottgallant">
+    <meta name="twitter:description" content="A Next.js calendar to track daily habits">
+    <meta name="twitter:image" content="https://scottgallant.net/media/seinfeld-calendar.png">
+    <meta property="twitter:domain" content="https://scottgallant.net">
+    <meta property="twitter:url" content="https://scottgallant.net/posts/seinfeld-calendar/">
+
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://scottgallant.net/posts/seinfeld-calendar/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Seinfeld Calendar">
+    <meta property="og:description" content="A Next.js calendar to track daily habits">
+    <meta property="og:image" content="https://scottgallant.net/media/seinfeld-calendar.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <script src="/nav.js"></script>
+        <article>
+            <h1 class="article-heading">The Seindfeld Calendar</h1>
+            <div class="article-date">Jan 8, 2024</div>
+            <details>
+                <summary>Table of Contents</summary>
+                <ul id="table_of_contents">
+                </ul>
+            </details>
+
+            <img src="/media/seinfeld-calendar.png" class="super-wide" alt="The Seinfeld Calendar - a Next.js calendar to track daily habits" />
+
+<h1>The Seinfeld Calendar</h1>
+<p>In 2022 I learned about
+  <a target="_blank" href="https://jamesclear.com/stop-procrastinating-seinfeld-strategy">The Seinfeld Strategy</a>. It’s simple. When you’re trying to build a daily habit (for Jerry, that was writing) you mark a big X on a calendar each day you do it. Over time, you end up with a chain of X’s on your calendar and your goal is to “not break the chain”.  According to the article above, Jerry Seinfeld explained this strategy to a new comedian like so:</p>
+
+  <blockquote>
+<p><em>He said the way to be a better comic was to create better jokes and the way to create better jokes was to write every day.</em></p>
+<p><em>He told me to get a big wall calendar that has a whole year on one page and hang it on a prominent wall. The next step was to get a big red magic marker. He said for each day that I do my task of writing, I get to put a big red X over that day.</em></p>
+<p><em>“After a few days you’ll have a chain. Just keep at it and the chain will grow longer every day. You’ll like seeing that chain, especially when you get a few weeks under your belt. Your only job is to not break the chain.”</em></p>
+</blockquote>
+<h2>2024: Going Digital</h2>
+<p>I’ve been using this strategy since 2022 to track my exercise. My goal is just to exercise 5 days/week. Last week, I found myself without a physical calendar so I did what any good (rusty?) web developer would do and built a simple calendar with Next.js. </p>
+
+<p>It just loops through <a target="_blank" href="https://github.com/scottgallant/seinfeld-calendar/blob/main/src/data/specialDates.js">a JSON file</a> that contains
+    <em>dates</em> and <em>descriptions</em> then renders those to the calendar.</p>
+    
+    <p>See my 
+  <a target="_blank" href="https://seinfeld-calendar.vercel.app/">live exercise calendar</a> or check it out on <a target="_blank" href="https://github.com/scottgallant/seinfeld-calendar">GitHub</a>.</p>
+
+
+  
+
+  <h2>Make Your Own Calendar</h2>
+<p>Trying to build/break a habit? Just fork
+  <a target="_blank" href="https://github.com/scottgallant/seinfeld-calendar">the repo</a> and run</p>
+<p>
+    <pre><code class="language-css"> npm install</code></pre>
+
+    <p>Add dates to <code>src/data/specialDates.js</code></p>
+        <pre style="overflow: scroll;"><code class="language-css">
+const specialDates = [
+    { "date": "2024-01-03", "description": "Run 3K" },
+    { "date": "2024-01-04", "description": "Bike 45mins" },
+    { "date": "2024-01-05", "description": "Physio" },
+    { "date": "2024-01-07", "description": "Strength Training" },
+];
+          </code></pre>
+
+          <p>Then run</p>
+    <pre><code class="language-css">npm run dev</code></pre>
+
+
+
+        </article>
+    </div>
+    <script src="/footer.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>

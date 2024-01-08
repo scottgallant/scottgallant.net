@@ -3,6 +3,9 @@ document.write(`
 <section>
             <h2>Posts</h2>
             <ul type="circle">
+            <li><a href="/posts/seinfeld-calendar">The Seinfeld Calendar</a> -
+                    <small><em>Jan 8, 2024</em></small>
+                </li>    
             <li><a href="/posts/sam-altman-jiu-jitsu-master/">Sam Altman, Jiu Jitsu Master</a> -
                     <small><em>Nov 23, 2023</em></small>
                 </li>    
