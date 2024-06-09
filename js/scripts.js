@@ -64,20 +64,23 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get all headings inside the article tag, excluding h1
   const headings = document.querySelectorAll('article h2, article h3, article h4, article h5, article h6');
 
+  // add IDs to all headings
   headings.forEach((heading) => {
     heading.id == '' ? heading.id = `${slugify(heading.innerText)}` : heading.id;
   });
-
-  console.log(headings);
   
   // Initialize variables to keep track of the hierarchy
   let lastLevel = 1;  // We're starting from level 2 (h2) since we excluded h1
+
   let currentContainer = tocContainer;
 
-  headings.forEach((heading) => {
+  headings.forEach((heading, index) => {
     const level = parseInt(heading.tagName[1], 10);
+    console.log(`${heading.innerText} - Level: ${level}, Last Level: ${lastLevel}`)
 
-    if (level > lastLevel) {
+    if (index == 0) {
+    }
+    else if (level > lastLevel) {
       // Create a new list for sub-items
       const newList = document.createElement('ul');
       currentContainer.appendChild(newList);
@@ -99,5 +102,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update the lastLevel to the current heading's level
     lastLevel = level;
+  });
+
+  // on click show the table of contents
+  document.querySelector('.table-of-contents-container p').addEventListener('click', function() {
+    tocContainer.style.display = 'block';
   });
 });

@@ -309,18 +309,28 @@ img.super-wide {
     border-radius: 4px;
 }
 
-details {
+.table-of-contents-container {
     margin-bottom: 5em;
     font-size: .75em;
-}
-
-summary {
     text-align: center;
     cursor: pointer;
-}
 
-#table_of_contents {
-    padding-left: 0;
+    > ul {
+        display: none;
+        text-align: left;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    > ul {
+        border: var(--border);
+        padding: 1em 1.5em;
+        border-radius: 10px;
+
+        li {
+            padding-bottom: .3em;
+        }
+    }
 }
 
 .article-date {
