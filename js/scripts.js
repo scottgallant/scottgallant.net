@@ -45,6 +45,15 @@ window.addEventListener("storage", function() {
 }, false);
 
 
+const slugify = (text) => {
+  return text
+    .toLowerCase()
+    .replace(/\s/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/-+/g, '-');
+}
+
+
 // Add Table of Contents to posts
 
 // when the page is loaded, do the following
@@ -55,10 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get all headings inside the article tag, excluding h1
   const headings = document.querySelectorAll('article h2, article h3, article h4, article h5, article h6');
 
-  headings.forEach((heading, index) => {
-    heading.id == '' ? heading.id = `heading-${index}` : heading.id;
+  headings.forEach((heading) => {
+    heading.id == '' ? heading.id = `${slugify(heading.innerText)}` : heading.id;
   });
 
+  console.log(headings);
+  
   // Initialize variables to keep track of the hierarchy
   let lastLevel = 1;  // We're starting from level 2 (h2) since we excluded h1
   let currentContainer = tocContainer;
