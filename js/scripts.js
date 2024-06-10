@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get all headings inside the article tag, excluding h1
   const headings = document.querySelectorAll('article h2, article h3, article h4, article h5, article h6');
 
+  if (headings.length == 0) {
+    // hide the table of contents container if there are no headings
+    document.querySelector('.table-of-contents-container').classList.add("hidden");
+    return;
+  }
+
   // add IDs to all headings
   headings.forEach((heading) => {
     heading.id == '' ? heading.id = `${slugify(heading.innerText)}` : heading.id;
@@ -106,6 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // on click show the table of contents
   document.querySelector('.table-of-contents-container p').addEventListener('click', function() {
-    tocContainer.style.display = 'block';
+    tocContainer.classList.toggle("hidden");
   });
 });

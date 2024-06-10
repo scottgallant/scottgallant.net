@@ -312,17 +312,27 @@ img.super-wide {
 .table-of-contents-container {
     margin-bottom: 5em;
     font-size: .75em;
-    text-align: center;
     cursor: pointer;
 
-    > ul {
-        display: none;
-        text-align: left;
-        max-width: 500px;
-        margin: auto;
+    p {
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+        color: var(--secondary);
+
+        span {
+            vertical-align: text-top;
+        }
+    }
+
+    p:hover {
+        color: var(--text);
     }
 
     > ul {
+        text-align: left;
+        max-width: 500px;
+        margin: 1em auto;
         border: var(--border);
         padding: 1em 1.5em;
         border-radius: 10px;
