@@ -38,7 +38,7 @@ body.dark {
     background-color: #1a1a1a;
     --text: #efefef;
     --secondary: #BCBCBD;
-    --dividers: #878787;
+    --dividers: #333333;
     --border: 1px solid var(--dividers);
     color: var(--secondary);
 }
