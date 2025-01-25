@@ -10,7 +10,8 @@
     --secondary: rgba(0, 0, 0, .54);
     --line-height-base: 1.6;
     --font-size-base: 22px;
-    --border: 1px solid rgba(0, 0, 0, 0.12);
+    --border-color: rgba(0, 0, 0, 0.12);
+    --border: 1px solid var(--border-color);
 }
 
 body {
@@ -40,6 +41,7 @@ body.dark {
     --secondary: #BCBCBD;
     --dividers: #333333;
     --border: 1px solid var(--dividers);
+    --border-color: var(--dividers);
     color: var(--secondary);
 }
 
@@ -103,6 +105,11 @@ a {
 
 a:visited {
     color: var(--primary);
+}
+
+blockquote {
+    border-left: 4px solid var(--border-color);
+    padding-left: 1em;
 }
 
 pre {
@@ -334,8 +341,9 @@ img.super-wide {
         max-width: 500px;
         margin: 1em auto;
         border: var(--border);
-        padding: 1em 1.5em;
+        padding: 1.5em 3em;
         border-radius: 10px;
+        box-sizing: border-box;
 
         li {
             padding-bottom: .3em;
@@ -386,6 +394,7 @@ h1.article-heading {
 table {
     border-spacing: 0;
     border: 1px solid black;
+    border: var(--border);
     margin: 1em 0;
 
     tr:last-child {
@@ -398,8 +407,8 @@ table {
     td {
       margin: 0;
       padding: 0.5rem 0.7rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      border-bottom: var(--border);
+      border-right: var(--border);
     }
     th:last-child {
         border-right: 0;
