@@ -3,7 +3,7 @@ document.write(`
 <section>
             <h2>Posts</h2>
             <ul type="circle">
-            <li><a href="/posts/product-management">Core Tenets of the Product Manager Role</a> -
+            <li><a href="/posts/product-management">Principles of the Product Manager Role</a> -
                     <small><em>May 28, 2024</em></small>
                 </li>
             <li><a href="/posts/seinfeld-calendar">The Seinfeld Calendar</a> -
